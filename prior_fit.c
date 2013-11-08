@@ -4,6 +4,7 @@
 #include <math.h>
 #include "nrutil.h"
 //#include "/Users/pmarti/Dropbox/Pol/Tesi/photoz/2slaq_DR7_LRG_webcat/BPZ/PRIOR/prior_fit.h"
+//include "../PhD_pmarti/Routine/Parameters/pau_prior_fit.h"
 #include "../Parameters/pau_prior_fit.h"
 
 /*This routine "prior_fit_v1" works together with "nrutil.c". It fits the prior function described in Benitez 2000 using the values: 
@@ -322,7 +323,7 @@ float function(float *lam_fit)
 			//Computing p(t|m).........................................
 			if(t<3) pt=f[t]*exp(-lam_fit[t]*dm);
 			else pt=1-(f[1]*exp(-lam_fit[1]*dm))-(f[2]*exp(-lam_fit[2]*dm));
-		
+	
 			//Computing p(z|t,m)......................................
 			zmt=lam_fit[t+5]+(lam_fit[t+8]*dm);
 			
